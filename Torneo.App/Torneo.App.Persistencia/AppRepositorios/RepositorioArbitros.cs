@@ -1,8 +1,7 @@
-
-
 using System.Collections.Generic;
+using System.Linq;
+using Microsoft.EntityFrameworkCore.Query;
 using Torneo.App.Dominio;
-
 namespace Torneo.App.Persistencia
 {
     public class RepositorioArbitros : IRepositorioArbitros
@@ -22,22 +21,38 @@ namespace Torneo.App.Persistencia
 
         void IRepositorioArbitros.DeleteArbitro(int idArbitro)
         {
-            throw new System.NotImplementedException();
+            var arbitroEncontrado = _appContext.Arbitros.Find(idArbitro);
+            if (arbitroEncontrado == null)
+                return;
+            _appContext.Arbitros.Remove(arbitroEncontrado);
+            _appContext.SaveChanges();
+
         }
 
         IEnumerable<Arbitro> IRepositorioArbitros.GetAllArbitros()
         {
-            throw new System.NotImplementedException();
+            return _appContext.Arbitros;
         }
 
         Arbitro IRepositorioArbitros.GetArbitro(int idArbitro)
         {
-            throw new System.NotImplementedException();
+            return _appContext.Arbitros.Find(idArbitro);
         }
 
         Arbitro IRepositorioArbitros.UpdateArbitro(Arbitro arbitro)
         {
-            throw new System.NotImplementedException();
+            var arbitroEncontrado = _appContext.Arbitros.FirstOrDefault(a => a.Id == arbitro.Id);
+            if(arbitroEncontrado != null)
+            {
+                arbitroEncontrado.Nombre = arbitro.Nombre;
+                arbitroEncontrado.Documento = arbitro.Documento;
+                arbitroEncontrado.Telefono = arbitro.Telefono;
+                arbitroEncontrado.ColegioArbitro = arbitro.ColegioArbitro;
+
+                _appContext.SaveChanges();
+            }
+            return arbitroEncontrado;
         }
+        
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using Microsoft.EntityFrameworkCore;
 using Torneo.App.Dominio;
 
@@ -25,5 +26,7 @@ namespace Torneo.App.Persistencia
 
             }
         }
+
+        
     }
 }
