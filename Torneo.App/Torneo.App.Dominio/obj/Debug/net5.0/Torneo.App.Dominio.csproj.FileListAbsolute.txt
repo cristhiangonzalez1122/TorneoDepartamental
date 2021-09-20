@@ -1,0 +1,12 @@
+C:\git\TorneoDepartamental\Torneo.App\Torneo.App.Dominio\bin\Debug\net5.0\Torneo.App.Dominio.deps.json
+C:\git\TorneoDepartamental\Torneo.App\Torneo.App.Dominio\bin\Debug\net5.0\Torneo.App.Dominio.dll
+C:\git\TorneoDepartamental\Torneo.App\Torneo.App.Dominio\bin\Debug\net5.0\ref\Torneo.App.Dominio.dll
+C:\git\TorneoDepartamental\Torneo.App\Torneo.App.Dominio\bin\Debug\net5.0\Torneo.App.Dominio.pdb
+C:\git\TorneoDepartamental\Torneo.App\Torneo.App.Dominio\obj\Debug\net5.0\Torneo.App.Dominio.csproj.AssemblyReference.cache
+C:\git\TorneoDepartamental\Torneo.App\Torneo.App.Dominio\obj\Debug\net5.0\Torneo.App.Dominio.GeneratedMSBuildEditorConfig.editorconfig
+C:\git\TorneoDepartamental\Torneo.App\Torneo.App.Dominio\obj\Debug\net5.0\Torneo.App.Dominio.AssemblyInfoInputs.cache
+C:\git\TorneoDepartamental\Torneo.App\Torneo.App.Dominio\obj\Debug\net5.0\Torneo.App.Dominio.AssemblyInfo.cs
+C:\git\TorneoDepartamental\Torneo.App\Torneo.App.Dominio\obj\Debug\net5.0\Torneo.App.Dominio.csproj.CoreCompileInputs.cache
+C:\git\TorneoDepartamental\Torneo.App\Torneo.App.Dominio\obj\Debug\net5.0\Torneo.App.Dominio.dll
+C:\git\TorneoDepartamental\Torneo.App\Torneo.App.Dominio\obj\Debug\net5.0\ref\Torneo.App.Dominio.dll
+C:\git\TorneoDepartamental\Torneo.App\Torneo.App.Dominio\obj\Debug\net5.0\Torneo.App.Dominio.pdb
