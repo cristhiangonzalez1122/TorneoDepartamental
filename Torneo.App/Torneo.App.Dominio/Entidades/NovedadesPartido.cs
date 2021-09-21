@@ -9,7 +9,7 @@ namespace Torneo.App.Dominio
         public int Goles { get; set; }
         public string Novedades {get;set;}
         public string MinutoGol {get;set;}
-        public Jugador JugadorGol {get;set;}
+        public Jugador Jugador {get;set;}
 
     }
 }
