@@ -12,23 +12,31 @@ namespace Torneo.App.Consola
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Hello Test");
+            //AddMunicipio();
+            //DeleteMunicipio(2);
         }
 
         private static void AddMunicipio()
         {
             var municipio = new Municipio
             {
-                NombreMunicipio = "Palmira"
+                NombreMunicipio = "Cali",
             };
             _repoMunicipio.AddMunicipio(municipio);
         }
 
+        private static void DeleteMunicipio(int idMunicipio)
+        {
+            _repoMunicipio.DeleteMunicipio(idMunicipio);
+            System.Console.WriteLine("Se borró el municipio con id: " + idMunicipio);
+        }
 
-        
 
 
 
-        
+
+
+
     }
 }
