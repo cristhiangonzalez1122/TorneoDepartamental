@@ -17,7 +17,7 @@ namespace Torneo.App.Consola
             //DeleteMunicipio(2);
             //GetMunicipio(4);
             //GetAllMunicipios();
-            UpdateMunicipio(4, "Jamundi");
+            //UpdateMunicipio(4, "Jamundi");
         }
 
         private static void AddMunicipio()
