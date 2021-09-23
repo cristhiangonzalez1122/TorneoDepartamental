@@ -13,6 +13,7 @@ namespace Torneo.App.Dominio
         public Equipo EquipoVisitante { get; set; }
         public int MarcadorVisitante { get; set; }
         public Arbitro arbitro { get; set; }
+        public System.Collections.Generic.List<NovedadPartido> NovedadesDelPartido { get; set; } //Puede tener una o varias novedades un partido
 
     }
 }

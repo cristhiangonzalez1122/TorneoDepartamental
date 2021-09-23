@@ -7,6 +7,6 @@ namespace Torneo.App.Dominio
         public string NombreJugador { get; set; }
         public string NumeroCamiseta { get; set; }
         public string Posicion { get; set; }
-        public Equipo EquipoPertenece {get;set;}
+        public Equipo Equipo {get;set;}
     }
 }
