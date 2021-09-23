@@ -1,7 +1,8 @@
 using System.Collections.Generic;
 using System.Linq;
-using Microsoft.EntityFrameworkCore.Query;
 using Torneo.App.Dominio;
+
+
 namespace Torneo.App.Persistencia
 {
     public class RepositorioArbitros : IRepositorioArbitros
