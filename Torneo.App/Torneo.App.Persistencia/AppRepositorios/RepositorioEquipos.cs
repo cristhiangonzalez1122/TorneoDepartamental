@@ -31,17 +31,24 @@ namespace Torneo.App.Persistencia
 
         IEnumerable<Equipo> IRepositorioEquipos.GetallEquipos()
         {
-            throw new System.NotImplementedException();
+            return _appContext.Equipos;
         }
 
         Equipo IRepositorioEquipos.GetEquipo(int idEquipo)
         {
-            throw new System.NotImplementedException();
+            return _appContext.Equipos.Find(idEquipo);
         }
 
         Equipo IRepositorioEquipos.UpdateEquipo(Equipo equipo)
         {
-            throw new System.NotImplementedException();
+            var equipoEncontrado = _appContext.Equipos.FirstOrDefault(e => e.Id == equipo.Id);
+            if(equipoEncontrado != null)
+            {
+                equipoEncontrado.NombreEquipo = equipo.NombreEquipo;
+                _appContext.SaveChanges();
+            }
+            return equipoEncontrado;
+
         }
     }
 }
