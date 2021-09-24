@@ -11,6 +11,8 @@ namespace Torneo.App.Consola
     {
         private static IRepositorioMunicipios _repoMunicipio = new RepositorioMunicipios(new Persistencia.AppContext());
         private static IRepositorioArbitros _repoArbitro = new RepositorioArbitros(new Persistencia.AppContext());
+        private static IRepositorioDirectorTecnico _repoDirectorTecnico = new RepositorioDirectorTecnico(new Persistencia.AppContext());
+        private static IRepositorioEquipos _repoEquipo = new RepositorioEquipos(new Persistencia.AppContext());
 
 
 
@@ -32,7 +34,15 @@ namespace Torneo.App.Consola
             //UpdateArbitro(2,"Ricardo Ortiz", "94.125.661", "3215521245", "Escuela De Arbitros LTDA");
 
             //****** Director TEcnico
-            AddDirectorTecnico();
+            //AddDirectorTecnico();
+            AsignarEquipo(2,2);
+            
+
+
+            //*******equipos*********/*//////
+            //AddEquipo();
+
+
         }
 
         private static void AddMunicipio()
@@ -123,17 +133,54 @@ namespace Torneo.App.Consola
         }
 
 
-        //****************  CRUD DE EQUIPOS ********************************************************
+        //****************  CRUD DE DT ********************************************************
 
         private static void AddDirectorTecnico()
         {
             var directorTecnico = new DirectorTecnico
             {
-                Nombre = "Luis Carlos Velez",
-                Documento = "16.789.852",
-                Telefono = "3215524152",
+                Nombre = "Gerardo pedraza",
+                Documento = "1112.512.851",
+                Telefono = "325884551",
                 
             };
+            _repoDirectorTecnico.AddDirectorTecnico(directorTecnico);
+        }
+
+        private static void AsignarEquipo(int idEquipo, int idDirectorTecnico)
+        {
+            var equipo = _repoDirectorTecnico.AsignarEquipo(idEquipo, idDirectorTecnico);
+            
+            {
+                Console.WriteLine("El DT asignado es: " + equipo.Nombre);
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //*****************CRUD Equipos*************************************************
+
+        private static void AddEquipo()
+        {
+            var equipo = new Equipo
+            {
+                NombreEquipo = "Inter",
+                
+            };
+            _repoEquipo.AddEquipo(equipo);
         }
 
 

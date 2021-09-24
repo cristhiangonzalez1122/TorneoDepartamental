@@ -11,5 +11,6 @@ namespace Torneo.App.Persistencia
         DirectorTecnico UpdateDirectorTecnico(DirectorTecnico directorTecnico);
         void DeleteDirectorTecnico(int idDirectorTecnico);
         DirectorTecnico GetDirectorTecnico(int idDirectorTecnico);
+        DirectorTecnico AsignarEquipo(int idDirectorTecnico, int idEquipo);
     }
 }

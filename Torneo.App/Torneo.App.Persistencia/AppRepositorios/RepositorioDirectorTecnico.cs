@@ -19,6 +19,22 @@ namespace Torneo.App.Persistencia
             return DirectorAdicionado.Entity;
         }
 
+        DirectorTecnico IRepositorioDirectorTecnico.AsignarEquipo(int idDirectorTecnico, int idEquipo)
+        {
+            var directorEncontrado = _appContext.DirectoresTecnicos.FirstOrDefault(d => d.Id == idDirectorTecnico);
+            if (directorEncontrado != null)
+            {
+                var equipoEncontrado = _appContext.Equipos.FirstOrDefault(e => e.Id == idEquipo);
+                if (equipoEncontrado != null)
+                {
+                    directorEncontrado.Equipo = equipoEncontrado;
+                    _appContext.SaveChanges();
+                }
+                return directorEncontrado;
+            }
+            return null;
+        }
+
         void IRepositorioDirectorTecnico.DeleteDirectorTecnico(int idDirectorTecnico)
         {
             var directorEncontrado = _appContext.DirectoresTecnicos.Find(idDirectorTecnico);
