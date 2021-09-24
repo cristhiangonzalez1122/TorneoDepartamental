@@ -46,6 +46,7 @@ namespace Torneo.App.Persistencia
             {
                 estadioEncontrado.Nombre = estadio.Nombre;
                 estadioEncontrado.Direccion = estadio.Direccion;
+                estadioEncontrado.Municipio = estadio.Municipio;
 
                 _appContext.SaveChanges();
             }

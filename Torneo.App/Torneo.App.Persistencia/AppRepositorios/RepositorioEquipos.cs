@@ -45,6 +45,8 @@ namespace Torneo.App.Persistencia
             if(equipoEncontrado != null)
             {
                 equipoEncontrado.NombreEquipo = equipo.NombreEquipo;
+                equipoEncontrado.Municipio = equipo.Municipio;
+                
                 _appContext.SaveChanges();
             }
             return equipoEncontrado;

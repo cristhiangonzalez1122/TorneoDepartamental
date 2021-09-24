@@ -50,6 +50,7 @@ namespace Torneo.App.Persistencia
                 estadisticaEncontrada.GolesFavor = estadistica.GolesFavor;
                 estadisticaEncontrada.GolesEnContra = estadistica.GolesEnContra;
                 estadisticaEncontrada.Puntos = estadistica.Puntos;
+                estadisticaEncontrada.Equipo = estadistica.Equipo;
 
                 _appContext.SaveChanges();
             }

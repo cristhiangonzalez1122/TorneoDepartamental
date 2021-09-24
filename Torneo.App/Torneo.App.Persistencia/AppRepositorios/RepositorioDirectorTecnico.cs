@@ -47,6 +47,7 @@ namespace Torneo.App.Persistencia
                  directorEncontrado.Nombre = directorTecnico.Nombre;
                  directorEncontrado.Documento = directorTecnico.Documento;
                  directorEncontrado.Telefono = directorTecnico.Telefono;
+                 directorEncontrado.Equipo = directorTecnico.Equipo;
 
                  _appContext.SaveChanges();
              }

@@ -7,7 +7,7 @@ namespace Torneo.App.Persistencia
 {
     public class RepositorioJugadores : IRepositorioJugadores
     {
-         private readonly AppContext _appContext;
+        private readonly AppContext _appContext = new AppContext();
 
         public RepositorioJugadores(AppContext appContext)
         {
@@ -43,11 +43,12 @@ namespace Torneo.App.Persistencia
         Jugador IRepositorioJugadores.UpdateJugador(Jugador jugador)
         {
             var jugadorEncontrado = _appContext.Jugadores.FirstOrDefault(j => j.Id == jugador.Id);
-            if(jugadorEncontrado != null)
+            if (jugadorEncontrado != null)
             {
                 jugadorEncontrado.NombreJugador = jugador.NombreJugador;
                 jugadorEncontrado.NumeroCamiseta = jugador.NumeroCamiseta;
                 jugadorEncontrado.Posicion = jugador.Posicion;
+                jugadorEncontrado.Equipo = jugador.Equipo;
 
                 _appContext.SaveChanges();
             }
